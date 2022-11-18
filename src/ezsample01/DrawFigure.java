@@ -28,13 +28,14 @@ public class DrawFigure {
 		EZ.addPolygon(xp, yp, Color.MAGENTA, false);
 
 		//イメージを描画 (ファイル名, 中心座標x, 中心座標y)
-		EZ.addImage("src/ezsample01/cat.jpg", 300,300);
+		EZImage cat = EZ.addImage("src/ezsample01/cat.jpg", 300,300);
+		cat.turnLeft(30);
 		//文字を描画する(文字列の中心座標x, 文字列の中心座標y, 文字列，色 [,サイズ] )
 		EZ.addText(40,20, "Hello World", Color.BLACK, 12);
 		EZ.addText(300,50, "012あいう漢字", Color.BLACK, 24);
 
 		// 円を描く．(中心座標x, 中心座標y, 幅，高さ，色，塗りつぶし)
-		EZCircle circle = EZ.addCircle(100, 100, 150, 150, Color.BLUE, true);
+		EZCircle circle = EZ.addCircle(100, 100, 150, 150, Color.RED, true);
 		EZ.addCircle(200, 200, 200, 200, Color.RED,  false);
 	}
 }
